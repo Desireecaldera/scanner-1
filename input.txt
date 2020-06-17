@@ -1,0 +1,13 @@
+123 abc 123._abc 456$)&
+
+firstvar =  123;
+
+    secondVar = 21.;
+
+var3 = 1.5;
+
+repeat (10)
+    var3 = 2 * (firstvar + secondVar) / (firstvar + 2);
+
+repeat (firstvar + 2 * secondVar)
+    print firstvar;
