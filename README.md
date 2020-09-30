@@ -60,7 +60,7 @@ The result would be the following tokens:
 < PUNCTUATION . >
 ```
 
-Note that lexing is disjoint from syntax; a sequence of random words which make absolutely no sense as a sentence could still be lexed correctly, but issues would arise when parsing as an invalid sentence cannot parsed find any coherent meaning. Here, we are not looking to parse the input, only to lex it.
+Note that lexing is disjoint from syntax; a sequence of random words which make absolutely no sense as a sentence could still be lexed correctly, but issues would arise when parsing as an invalid sentence cannot be parsed to find any coherent meaning. Here, we are not looking to parse the input, only to lex it.
 
 Look through the [grammar](#grammar) and list the token types.
 
