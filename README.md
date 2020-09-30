@@ -125,7 +125,7 @@ Don't forget to deal with characters which aren't included in the grammar (see h
 
 ## Sample Run <a name="sample_run"></a>
 
-The following is a successful sample run for the provided [`input.txt`](./lab_4_scanner/input.txt):
+The following is a successful sample run for the provided [`input.txt`](./input.txt):
 
 ```
 <INT, 123>
