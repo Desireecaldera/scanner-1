@@ -12,8 +12,18 @@
 //
 void freeToken(TOKEN **token)
 {
+
+    if( *token == NULL ){
+        return;
+    }
+    TOKEN *freTok = *token;
+
+     free(freTok->val.string);
+     free( freTok );
+     freTok = NULL;
+
     /*
-     * TODO
+     * TODO (done)
      * free the referenced TOKEN*, and any data in
      * the referenced TOKEN which requires freeing
      * (not in that order).
@@ -24,6 +34,41 @@ void freeToken(TOKEN **token)
 
 void printToken (TOKEN **token)
 {
+
+   TOKEN *currToken = *token;
+    switch ( currToken->type ) {
+        case INT:
+            printf( "< %s > , %ld", currToken->type, currToken->val.integer );
+            break;
+        case FLOAT:
+            printf( "< %s > , %f ", currToken->type, currToken->val.floating_point );
+            break;
+        case ADD_OP:
+            printf( "< %s >, %c ", currToken->type, currToken->val.op);
+            break;
+        case MULT_OP:
+            printf( "< %s >, %c ", currToken->type, currToken->val.op);
+            break;
+        case RPAREN:
+            printf( "< %s > ", currToken->type );
+            break;
+        case LPAREN:
+            printf( "< %s > ", currToken->type );
+            break;
+        case ASSIGN:
+            printf( "< %s > ", currToken->type );
+            break;
+        case SEMICOLON:
+            printf( "< %s > ", currToken->type );
+            break;
+        case EOF_TOKEN:
+            printf( "< %s > ", currToken->type );
+            break;
+        case IDENT:
+            printf( "< %s > , %s ",currToken->type, currToken->val.string );
+            break;
+
+    }
     /*
      * TODO
      * Print the referenced token in a readable format.
