@@ -10,19 +10,19 @@ typedef enum
     UNASSIGNED,
     INVALID_TOKEN,
     EOF_TOKEN,
-    REPEAT,
-    ASSIGN,    // =
-    FLOAT,
-    INT,
-    IDENT,
-    RPAREN,
-    LPAREN,
-    MULT_OP,    // * /
-    ADD_OP,
-    SEMICOLON,
-    PRINT,
+    REPEAT_TOKEN,
+    ASSIGN_TOKEN,    // =
+    FLOAT_TOKEN,
+    INT_TOKEN,
+    IDENT_TOKEN,
+    RPAREN_TOKEN,
+    LPAREN_TOKEN,
+    MULTOP_TOKEN,    // * /
+    ADDOP_TOKEN,
+    SEMICOLON_TOKEN,
+    PRINT_TOKEN,
 
-    // TODO complete the enum (I believe this is done)
+    // TODO complete the enum (done)
     // there are 11 more...
 } TOKEN_TYPE;
 
@@ -43,23 +43,20 @@ typedef struct token
 typedef enum
 {
     START_STATE,
-    INVALID_STATE,
+    INVALID_STATE,   // everything else
     SEMICOL_STATE,  // ;
     ASSIGN_STATE,  // = assign
-    LPAREN_STATE, // lparen
-    RPAREN_STATE,  //rparen
+    LPAREN_STATE, // lparen (
+    RPAREN_STATE,  //rparen )
     ADDOP_STATE,   //addOP + -
     MULTOP_STATE,  // multOp * / %
-    IDENTIF_STATE,  //indentifier [a-z]+  [0-9]+
+    IDENTIF_STATE,  //indentifier [a-z]+  [0-9]+ print and repeat
     INT_STATE,   // int [0-9]+
     FLOAT_STATE,   // float [0-9]+ [.][0-9]+
     EOF_STATE,  //EOF
 
-     //each keyword such as print and repeat has its own type
 
-
-
-    // TODO complete the enum(almost done)
+    // TODO complete the enum(done)
     // Recall that identifiers and keywords share a state.
 } FSM_STATE;
 

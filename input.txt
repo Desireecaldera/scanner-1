@@ -1,6 +1,6 @@
 123 abc 123._abc 456$)&
 
-firstvar =  123;
+firstvar = 123;
 
     secondVar = 21.;
 
